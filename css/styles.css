@@ -1,0 +1,257 @@
+:root {
+  --login-link-color: rgb(255, 255, 255);
+  --header-title-color: rgb(255, 255, 255);
+  --header-sub-title-color: rgb(255, 255, 255);
+  --header-descrpiption-color: rgb(255, 255, 255);
+  --find-your-partner-button-text-color: rgb(255, 255, 255);
+  --find-your-partner-button-color: rgb(255, 78, 80);
+  --meet-partner-title-color: rgb(51, 51, 51);
+  --partner-name-color: rgb(51, 51, 51);
+  --partner-descrpiption: rgb(102, 102, 102);
+  --see-other-partner-button-color: rgb(255, 78, 80);
+  --see-other-partner-button-hover-color: rgb(255, 255, 255);
+  --see-other-partner-button-text-color: rgb(255, 78, 80);
+  --mini-logo-1-color: rgb(255, 78, 80);
+  --mini-logo-2-color: rgb(255, 165, 7);
+  --mini-logo-3-color: rgb(28, 215, 173);
+  --mini-logo-4-color: rgb(78, 115, 219);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+    url("../fonts/montserrat-v14-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url("../fonts/roboto-v20-latin-300.woff2") format("woff2"),
+    url("../fonts/roboto-v20-latin-300.woff") format("woff");
+}
+
+.header-background {
+  background-position: center 0;
+  background-image: url("../img/header-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.header__login-with-title-block {
+  max-width: 100%;
+  padding-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login__block {
+  display: flex;
+  justify-content: space-between;
+  width: 41.25%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 8rem;
+}
+
+.login__button {
+  position: relative;
+  display: block;
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: var(--login-link-color);
+}
+
+.login__button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 5.625rem;
+  height: 2.25rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0);
+  border-radius: 1.25rem;
+  transition: border 0.2s linear;
+}
+
+.login__button:hover::before {
+  cursor: pointer;
+  border: 0.125rem solid var(--login-link-color);
+  border-radius: 1.25rem;
+}
+
+.header__title {
+  margin-bottom: 2.25rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--header-title-color);
+}
+
+.header__sub-title {
+  text-align: center;
+  margin-bottom: 1.125rem;
+  font-size: 1.875rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--header-sub-title-color);
+}
+
+.header__descrpiption {
+  text-align: center;
+  margin-bottom: 1.125rem;
+  font-size: 0.875rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--header-descrpiption-color);
+}
+
+.find-partner-button-block {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8.625rem;
+}
+
+.find-partner-button {
+  display: block;
+  width: 87.5%;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: var(--find-your-partner-button-text-color);
+  background-color: var(--find-your-partner-button-color);
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+.find-partner-button:hover {
+  cursor: pointer;
+  background-color: var(--find-your-partner-button-text-color);
+  color: var(--find-your-partner-button-color);
+}
+
+.meet-your-partner-title {
+  padding-top: 4.5rem;
+  margin-bottom: 1.125rem;
+  text-align: center;
+  font-size: 1.375rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: var(--meet-partner-title-color);
+}
+
+.partner-card {
+  margin: 0 auto;
+  max-width: 12.125rem;
+}
+
+.partner-card__image {
+  position: relative;
+  max-width: 7.5625rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.125rem;
+}
+
+.partner-card__image::after {
+  position: absolute;
+  display: block;
+  left: 86.6%;
+  top: 86.6%;
+  transform: translate(-50%, -50%);
+  width: 26.6%;
+  height: 26.6%;
+  content: "";
+  border: 0.25rem solid white;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.partner-image {
+  display: block;
+  max-width: 100%;
+}
+
+.card-1 .partner-card__image::after {
+  background-color: var(--mini-logo-1-color);
+  background-image: url("../img/mini-logo-tv.png");
+}
+
+.card-2 .partner-card__image::after {
+  background-color: var(--mini-logo-2-color);
+  background-image: url("../img/mini-logo-chemicals.png");
+}
+
+.card-3 .partner-card__image::after {
+  background-color: var(--mini-logo-3-color);
+  background-image: url("../img/mini-logo-coffe.png");
+}
+
+.card-4 .partner-card__image::after {
+  background-color: var(--mini-logo-4-color);
+  background-image: url("../img/mini-logo-paper-plane.png");
+}
+
+.partner-card__name {
+  text-align: center;
+  margin-bottom: 1.125rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: var(--partner-name-color);
+}
+
+.partner-card__descrpiption {
+  padding-bottom: 1.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+  color: var(--partner-descrpiption);
+}
+
+.see-another-partners-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.5rem;
+  width: 87.5%;
+  height: 2.5rem;
+  outline: none;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0.125rem solid var(--see-other-partner-button-color);
+  color: var(--see-other-partner-button-text-color);
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+.see-another-partners-button:hover {
+  cursor: pointer;
+  background-color: var(--see-other-partner-button-color);
+  color: var(--see-other-partner-button-hover-color);
+}
